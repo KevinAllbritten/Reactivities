@@ -23,6 +23,7 @@ export default class UserStore {
             router.navigate('/activities');
             store.modalStore.closeModal();
         } catch (error) {
+            console.log(error);
             throw error;
         }
     }
@@ -35,6 +36,7 @@ export default class UserStore {
             router.navigate('/activities');
             store.modalStore.closeModal();
         } catch (error) {
+            console.log(error);
             throw error;
         }
     }
@@ -50,6 +52,7 @@ export default class UserStore {
             const user = await agent.Account.current();
             runInAction(() => this.user = user);
         } catch (error) {
+            console.log(error);
             throw error;
         }
     }
